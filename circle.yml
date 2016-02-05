@@ -9,3 +9,8 @@ test:
   override:
     - gagarin -v
 
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: scrumify-app
