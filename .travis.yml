@@ -9,4 +9,5 @@ services:
   - mongodb
 
 script:
-  - "gagarin -verbose"
+  - "gagarin tests/**/* --webdriver 4444
+"
