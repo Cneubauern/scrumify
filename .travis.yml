@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "0.12"
+before_install:
+  - "curl https://install.meteor.com/ | sh"
+  - "npm install -g gagarin"
+
+services:
+  - mongodb
+
+script:
+  - "gagarin -verbose"
