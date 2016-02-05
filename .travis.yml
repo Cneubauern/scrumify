@@ -1,3 +1,4 @@
+sudo:true
 language: node_js
 node_js:
   - "0.12"
@@ -9,4 +10,4 @@ services:
   - mongodb
 
 script:
-  - "gagarin -verbose"
+  - "gagarin tests/**/* --webdriver 4444"
