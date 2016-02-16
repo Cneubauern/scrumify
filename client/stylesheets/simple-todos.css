@@ -124,3 +124,12 @@ header .hide-completed {
         padding-bottom: 5px;
     }
 }
+
+.navbar-nav {
+    height: 1.5em;
+}
+
+.navbar-nav, li {
+    padding: 0;
+    border-bottom: none;
+}

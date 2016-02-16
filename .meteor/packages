@@ -16,10 +16,10 @@ standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-accounts-ui
-accounts-password
-kadira:flow-router
-kadira:blaze-layout
-fourseven:scss
-twbs:bootstrap
-anti:gagarin
+accounts-password       #
+kadira:flow-router      # enables routing
+kadira:blaze-layout     # standard layout package
+fourseven:scss          # sass css-precompiler
+twbs:bootstrap          # twitter bootstrap
+
+anti:gagarin            # mocha based test framework
