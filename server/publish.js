@@ -13,3 +13,6 @@ Meteor.publish("tasks", function () {
     });
 });
 
+Meteor.publish("prjects", function(){
+    return Projects.find({})
+})
