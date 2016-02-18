@@ -19,16 +19,16 @@
 
                     <ul class="nav navbar-nav navbar-inverse navbar-left">
 
-                    <li><a href="./dashboard">Dashboard</a></li>
-                    <li><a href="./sprintbacklog">ProductBacklog</a></li>
-                    <li><a href="./productbacklog">SprintBacklog</a></li>
+                    <li><a href="{{pathFor 'dashboard' }}">Dashboard</a></li>
+                    <li><a href="sprintbacklog">ProductBacklog</a></li>
+                    <li><a href="{{pathFor 'productbacklog' }}">SprintBacklog</a></li>
                 </ul>
                 {{/if}}
 
                 <ul class="nav navbar-nav navbar-inverse navbar-right">
 
-                    <li><a href="./signin">Signin</a></li>
-                    <li><a href="./join">Join</a></li>
+                    <li>{{>atNavButton}}</li>
+
                     <li><!-- Button trigger modal -->
                         <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
                             Add new Project
