@@ -2,7 +2,18 @@
 
     <header>
         <h1>Dashboard</h1>
+            <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
+                Add new Project
+            </button>
+
+
+        {{> newProject}}
 
     </header>
-
+    <div class="container">
+        <a class="btn btn-default" href="{{pathFor 'productbacklog' }}">ProductBacklog</a>
+        <a class="btn btn-default" href="{{pathFor 'planning' }}">SprintPlanning</a>
+        <a class="btn btn-default" href="{{pathFor 'sprintbacklog'}}">SprintBacklog</a>
+        <a class="btn btn-default" href="{{pathFor 'taskboard' }}">Taskboard</a>
+    </div>
 </template>
