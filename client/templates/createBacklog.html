@@ -1,0 +1,37 @@
+<template name="createBacklog">
+
+    <header>
+        <h1>
+            Erstelle dein Backlog
+        </h1>
+
+        <form class="newBacklogItem">
+            <input type="text" name="text"  placeholder="Describe Your Item">
+            <input type="number" name="points" >
+            <label>ready for Planning?</label>
+            <input type="checkbox" name="isReady">
+            <input type="submit" placeholder="erstellen" class="create">
+        </form>
+
+    </header>
+
+    <div class="main-container">
+
+        <ul>
+            {{#each backlogItems}}
+                {{> backlogItem}}
+            {{/each}}
+        </ul>
+
+    </div>
+
+</template>
+
+
+<template name="backlogItem">
+    <li class="backlogItem">
+        <span class="item">{{text}}</span>
+        <span class="points">{{points}}</span>
+        <span class="ready"><input type="checkbox" checked="{{ready}}" class="toggle-checked" /></span>
+    </li>
+</template>
