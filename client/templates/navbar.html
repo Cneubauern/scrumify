@@ -9,11 +9,14 @@
                     <img alt="Brand" src="/images/scrumify-Logo.png">
                 </a>
             </div>
-
-
+            
             <ul class="nav navbar-nav navbar-default navbar-right">
 
-                <li>{{>atNavButton}}</li>
+                {{#if currentUser}}
+
+                    <li>{{>atNavButton}}</li>
+
+                {{/if}}
 
             </ul>
 

@@ -1,13 +1,5 @@
 Meteor.subscribe("backlogItems");
 
-
-Template.createBacklog.helpers({
-
-    backlogItems: function(){
-        return BacklogItems.find({})
-    }
-});
-
 Template.createBacklog.events({
 
     "submit .newBacklogItem": function(event){

@@ -25,8 +25,9 @@ anti:gagarin            # mocha based test framework
 aldeed:simple-schema
 
 useraccounts:flow-routing
-useraccounts:bootstrap
 useraccounts:core
 accounts-password
 arillo:flow-router-helpers
 johnantoni:meteor-normalize
+useraccounts:bootstrap
+aldeed:template-extension
