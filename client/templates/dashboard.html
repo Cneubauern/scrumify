@@ -1,24 +1,71 @@
 <template name="dashboard">
 
-    <header>
+    <article class="main">
 
-        <h1>Willkommen zum Sprint Planning</h1>
+        <section class="box">
+            <header>
 
-        <h3>
-            Um mit dem Scrum Planning loszulegen ben"otigt ihr eine Product Backlog mit euren User Stories.
-            Ihr könnt dieses schnell selbst anlegen, importieren oder ein TestBacklog benutzen.
-        </h3>
+                <h1>Willkommen zum Sprint Planning</h1>
 
-    </header>
+                <h3>
+                    Um mit dem Scrum Planning loszulegen ben&ouml;tigt ihr eine Product Backlog mit euren User Stories.
+                    Ihr könnt dieses schnell selbst anlegen, importieren oder ein TestBacklog benutzen.
+                </h3>
 
-    <div class="container">
+            </header>
+        </section>
+
+        <article class="chooseOne ">
+
+            <section class="box">
+                <h4>
+                    Wenn ihr bereits ein existierendes Product Backlog besitzt k&ouml;nnt ihr es hier
+                    importieren
+                </h4>
+                <footer>
+                    <a class="btn btn-default choosebtn" href="{{pathFor 'importBacklog' }}">Backlog Importieren</a>
+
+                </footer>
+
+            </section>
+
+        </article>
+
+        <article class="chooseOne">
+
+            <section class="box">
+
+                <h4>
+                    Wenn ihr von Null startet k&ouml;nnt ihr hier ein Backlog anlegen
+                </h4>
+
+                <footer>
+                    <a class="btn btn-default choosebtn" href="{{pathFor 'createBacklog' }}">Backog erstellen</a>
+
+                </footer>
+
+            </section>
+
+        </article>
+        <article class=" chooseOne">
+
+            <section class="box">
+
+                <h4>
+                    Hier k&ouml;nnt ihr mit einem Test Backlog starten
+                </h4>
+
+                <footer>
+                    <a class="btn btn-default choosebtn" href="{{pathFor 'test' }}">Testen</a>
+
+                </footer>
+
+            </section>
+
+        </article>
 
 
-        <a class="btn btn-default" href="{{pathFor 'importBacklog' }}">Backlog Importieren</a>
-        <a class="btn btn-default" href="{{pathFor 'createBacklog' }}">Backog erstellen</a>
-        <a class="btn btn-default" href="{{pathFor 'test' }}">Testen</a>
+    </article>
 
-
-    </div>
 
 </template>

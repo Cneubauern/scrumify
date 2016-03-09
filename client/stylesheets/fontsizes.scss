@@ -1,0 +1,52 @@
+html {
+  font-size: 100%;
+  line-height: 1;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 100;
+  margin: 0;
+
+}
+
+p {
+  font-size: 1.063em !important;
+  line-height: 1.223;
+  margin: .65em 0;
+}
+
+h1 {
+  font-size: 3.189em !important;
+  line-height: 1.223;
+}
+
+h2  {
+  font-size: 2.126em !important;
+  line-height: 1.223;
+}
+
+h3  {
+  font-size: 1.382em !important;
+  line-height: 1.176;
+}
+
+h4 {
+  font-size: 1em !important;
+  line-height: 1.56;
+  text-transform: uppercase;
+}
+
+h5,h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: .85em !important;
+  line-height: 1.53;
+  font-weight: 500;
+}
+
+h6 {
+  color: #aaa;
+  font-weight: 200;
+}

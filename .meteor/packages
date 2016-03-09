@@ -29,3 +29,4 @@ useraccounts:bootstrap
 useraccounts:core
 accounts-password
 arillo:flow-router-helpers
+johnantoni:meteor-normalize

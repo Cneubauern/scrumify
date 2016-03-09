@@ -1,37 +1,56 @@
 <template name="createBacklog">
 
-    <header>
-        <h1>
-            Erstelle dein Backlog
-        </h1>
+    <article class="main">
+        <section class="box">
+            <header>
+                <h1>
+                    Erstelle dein Backlog
+                </h1>
+                <h3>
+                    Trage hier die Funktionalit&auml;ten ein die in eurem Projekt umgesetzt werden sollen
+                </h3>
+            </header>
 
-        <form class="newBacklogItem">
-            <input type="text" name="text"  placeholder="Describe Your Item">
-            <input type="number" name="points" >
-            <label>ready for Planning?</label>
-            <input type="checkbox" name="isReady">
-            <input type="submit" placeholder="erstellen" class="create">
-        </form>
+            <div class="new-item-form">
 
-    </header>
+                <form class="newBacklogItem">
+                    <fieldset>
 
-    <div class="main-container">
+                        <label>Was habt ihr vor?</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Funktion</span>
+                            <input  type="text" placeholder="Username" class="form-control" name="text" aria-describedby="basic-addon1">
+                        </div>
 
-        <ul>
-            {{#each backlogItems}}
-                {{> backlogItem}}
-            {{/each}}
-        </ul>
+                        <label>Wie sch&auml;tzt ihr den Aufwand?</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon2">Aufwand</span>
+                            <input type="number" name="points" class="form-control"  aria-describedby="basic-addon2">
+                        </div>
 
-    </div>
+                        <label>Sind alle Vorgaben erf&uuml;t?</label>
+                        <div class="input-group">
+                            <input type="checkbox" name="isReady">
+                        </div>
+                        <div class="input-group">
+                            <input type="submit" class="form-control crete" placeholder="Username" aria-describedby="basic-addon4">
+                        </div>
 
+                    </fieldset>
+                </form>
+
+            </div>
+
+        </section>
+
+        <section class="box">
+            <ul class="list-group">
+                {{#each backlogItems}}
+                    {{> backlogItem}}
+                {{/each}}
+            </ul>
+        </section>
+
+    </article>
 </template>
 
-
-<template name="backlogItem">
-    <li class="backlogItem">
-        <span class="item">{{text}}</span>
-        <span class="points">{{points}}</span>
-        <span class="ready"><input type="checkbox" checked="{{ready}}" class="toggle-checked" /></span>
-    </li>
-</template>

@@ -1,0 +1,13 @@
+<template name="backlogItem">
+
+    <li class="backlogItem list-group-item">
+        <span class="item">{{text}}</span>
+        <span class="badge">{{points}}</span>
+        {{#if ready}}
+            <span class="label label-success">Bereit</span>
+        {{ else}}
+            <span class="label label-danger">Noch nicht bereit</span>
+        {{/if}}
+    </li>
+
+</template>
