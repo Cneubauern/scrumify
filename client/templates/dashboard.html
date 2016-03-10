@@ -10,6 +10,45 @@
             </h1>
         </section>
 
+        <section class="box">
+
+            <header>
+                <h2>
+                    Projekte
+
+                    <a href="{{pathFor 'newProject'}}" class="btn btn-default">Neues Projekt</a>
+
+                </h2>
+
+            </header>
+
+            <article>
+
+                <ul>
+
+                    {{#if projectsCount}}
+                    {{#each projects}}
+                        {{>project}}
+                        {{/each}}
+                    {{else}}
+                        <p>
+                            Du nimmst leider an noch keinen Projekten Teil. Bitte erstelle ein neues oder tritt einem bei.
+                        </p>
+                    {{/if}}
+                </ul>
+
+            </article>
+
+
+        </section>
+
     </div>
+
+</template>
+
+
+<template name="project">
+
+    <li>{{name}}</li>
 
 </template>

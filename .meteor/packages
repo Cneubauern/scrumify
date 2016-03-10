@@ -16,18 +16,31 @@ standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
+#Router
 kadira:flow-router      # enables routing
 kadira:blaze-layout     # standard layout package
+
+#Design Elements
 fourseven:scss          # sass css-precompiler
+johnantoni:meteor-normalize #normalize css
 twbs:bootstrap          # twitter bootstrap
 
+#Testing
 anti:gagarin            # mocha based test framework
-aldeed:simple-schema
 
-useraccounts:flow-routing
-useraccounts:core
-accounts-password
-arillo:flow-router-helpers
-johnantoni:meteor-normalize
-useraccounts:bootstrap
+aldeed:simple-schema
 aldeed:template-extension
+dburles:collection-helpers
+aldeed:collection2
+
+# User Accounts
+useraccounts:flow-routing # automaitc routing for Account Views
+useraccounts:core         # basic package for useraccounts
+useraccounts:bootstrap    # bootstrap templates for useraccounts
+accounts-password         # standard meteor accounts using password authentification
+
+
+#Helpers
+arillo:flow-router-helpers
+
+

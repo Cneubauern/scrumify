@@ -1,0 +1,56 @@
+<template name="newBacklog">
+    <section>
+        <article class="chooseOne ">
+
+            <section class="box">
+                <h4>
+                    Wenn ihr bereits ein existierendes Product Backlog besitzt k&ouml;nnt ihr es hier
+                    importieren
+                </h4>
+                <footer>
+                    <a class="btn btn-default choosebtn" href="{{pathFor 'importBacklog' }}">Backlog Importieren</a>
+
+                </footer>
+
+            </section>
+
+        </article>
+
+        <article class="chooseOne">
+
+            <section class="box">
+
+                <h4>
+                    Wenn ihr von Null startet k&ouml;nnt ihr hier ein Backlog anlegen
+                </h4>
+
+                <footer>
+                    <a class="btn btn-default choosebtn" href="{{pathFor 'createBacklog' }}">Backog erstellen</a>
+
+                </footer>
+
+            </section>
+
+        </article>
+
+    </section>
+
+    <section>
+        <article class=" chooseOne">
+
+            <section class="box">
+
+                <h4>
+                    Hier k&ouml;nnt ihr mit einem Test Backlog starten
+                </h4>
+
+                <footer>
+                    <a class="btn btn-default choosebtn" href="{{pathFor 'test' }}">Testen</a>
+
+                </footer>
+
+            </section>
+
+        </article>
+        </section>
+</template>

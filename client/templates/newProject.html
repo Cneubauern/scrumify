@@ -7,61 +7,46 @@
                 <h1>Willkommen zum Sprint Planning</h1>
 
                 <h3>
-                    Um mit dem Scrum Planning loszulegen ben&ouml;tigt ihr eine Product Backlog mit euren User Stories.
-                    Ihr könnt dieses schnell selbst anlegen, importieren oder ein TestBacklog benutzen.
+                    Um loszulegen erstelle zuerst ein Projekt
                 </h3>
 
             </header>
         </section>
 
-        <article class="chooseOne ">
+        <section>
 
-            <section class="box">
-                <h4>
-                    Wenn ihr bereits ein existierendes Product Backlog besitzt k&ouml;nnt ihr es hier
-                    importieren
-                </h4>
-                <footer>
-                    <a class="btn btn-default choosebtn" href="{{pathFor 'importBacklog' }}">Backlog Importieren</a>
+            <article class="chooseOne">
 
-                </footer>
+                <section class="box">
 
-            </section>
+                    <header>
+                       <h3>
+                           Hier kannst du ein neues Projekt erstellen
+                       </h3>
+                    </header>
 
-        </article>
+                </section>
 
-        <article class="chooseOne">
+            </article>
 
-            <section class="box">
 
-                <h4>
-                    Wenn ihr von Null startet k&ouml;nnt ihr hier ein Backlog anlegen
-                </h4>
+            <article class=" chooseOne">
 
-                <footer>
-                    <a class="btn btn-default choosebtn" href="{{pathFor 'createBacklog' }}">Backog erstellen</a>
+                <section class="box">
 
-                </footer>
+                    <h4>
+                        Hier kannst du einem Projekt beitreten
+                    </h4>
 
-            </section>
+                    <footer>
+                        <a class="btn btn-default choosebtn" href="{{pathFor 'joinProject' }}">Beitreten</a>
 
-        </article>
-        <article class=" chooseOne">
+                    </footer>
 
-            <section class="box">
+                </section>
 
-                <h4>
-                    Hier k&ouml;nnt ihr mit einem Test Backlog starten
-                </h4>
-
-                <footer>
-                    <a class="btn btn-default choosebtn" href="{{pathFor 'test' }}">Testen</a>
-
-                </footer>
-
-            </section>
-
-        </article>
+            </article>
+        </section>
 
 
     </div>
