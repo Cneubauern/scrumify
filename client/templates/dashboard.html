@@ -24,7 +24,7 @@
 
             <article>
 
-                <ul>
+                <div class="list-group">
 
                     {{#if projectsCount}}
                     {{#each projects}}
@@ -35,7 +35,7 @@
                             Du nimmst leider an noch keinen Projekten Teil. Bitte erstelle ein neues oder tritt einem bei.
                         </p>
                     {{/if}}
-                </ul>
+                </div>
 
             </article>
 
@@ -49,6 +49,6 @@
 
 <template name="project">
 
-    <li>{{name}}</li>
+    <button type="button" class="list-group-item">{{name}}</button>
 
 </template>

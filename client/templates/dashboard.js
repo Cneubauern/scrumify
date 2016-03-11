@@ -40,3 +40,18 @@ Template.dashboard.helpers({
 
 })
 
+Template.project.events({
+
+    "click .startPlanning": function(event){
+
+        console.log(this.id)
+        Session.set("projectId", this.id)
+    },
+
+    "click .deleteBtn": function(event){
+
+
+
+    }
+
+})
