@@ -24,5 +24,4 @@ Template.createBacklog.events({
 
     }
 
-
 });
