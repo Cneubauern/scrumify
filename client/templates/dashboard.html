@@ -6,7 +6,7 @@
 
         <section class="box">
             <h1>
-                Willkommen
+                Willkommen, {{username}}
             </h1>
         </section>
 
@@ -16,8 +16,9 @@
                 <h2>
                     Projekte
 
-                    <a href="{{pathFor 'newProject'}}" class="btn btn-default">Projekt hinzuf&uuml;gen</a>
-
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg" id="openModal">
+                        Projekt hinzuf&uuml;gen </button>
                 </h2>
 
             </header>
@@ -27,9 +28,13 @@
                 <div class="list-group">
 
                     {{#if projectsCount}}
+
                     {{#each projects}}
+
                         {{>project}}
+
                         {{/each}}
+
                     {{else}}
                         <p>
                             Du nimmst leider an noch keinen Projekten Teil. Bitte erstelle ein neues oder tritt einem bei.
@@ -44,11 +49,27 @@
 
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="newProject" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+
+
+                    {{> Template.dynamic template=modalTemplate}}
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </template>
 
 
 <template name="project">
 
-    <button type="button" class="list-group-item">{{name}}</button>
+    <button type="button" class="list-group-item startPlanning">{{projectname}}</button>
 
 </template>
+

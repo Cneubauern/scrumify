@@ -11,7 +11,24 @@
             </form>
         </section>
 
+        <section class="box">
+            <div class="list-group">
+
+                {{#each chooseprojects}}
+
+                    {{> chooseproject}}
+
+                {{/each}}
+
+            </div>
+        </section>
 
     </div>
+
+</template>
+
+<template name="chooseproject">
+
+    <button type="button" class="selectProject list-group-item">{{_id}}</button>
 
 </template>

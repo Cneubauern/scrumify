@@ -15,3 +15,12 @@ Meteor.publish('privateBacklogs', function() {
 Meteor.publish('backlogItems', function(listId) {
     return BacklogItems.find();
 });
+
+Meteor.publish('projects', function(){
+    return Projects.find();
+});
+
+
+Meteor.publish('userProjects', function(){
+    return UserProjects.find();
+});

@@ -15,7 +15,7 @@ Template.createBacklog.events({
         var ready = event.target.isReady.checked;
 
         // Insert a task into the collection
-       Meteor.call("addBacklogItem", text,points, ready)
+       Meteor.call("addBacklogItem", text, points, ready);
 
         // Clear form
         event.target.text.value = "";
