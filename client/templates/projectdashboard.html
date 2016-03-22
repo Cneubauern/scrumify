@@ -1,0 +1,68 @@
+<template name="projectdashboard">
+
+<div class="main">
+
+    <section class="box" id="projectDescription">
+        <header>
+            <h2>
+                {{projectname}}
+            </h2>
+        </header>
+    </section>
+
+    <section class="box" id="registeredUsers">
+
+        <ul class="list-group">
+            {{#each users}}
+
+                {{>user}}
+
+            {{/each}}
+        </ul>
+
+    </section>
+
+    <section class="box" id="productbacklog">
+
+    {{#if productBacklogCount}}
+
+    {{#each productBacklog}}
+
+        {{> productBacklogItem}}
+
+    {{/each}}
+
+    {{else}}
+
+        {{>newBacklog}}
+
+    {{/if}}
+
+    </section>
+
+        <section class="box" id="sprintBacklog">
+
+            {{#if sprintBacklogCount}}
+
+                {{#each sprintBacklog}}
+
+                    {{> sprintBacklogItem}}
+
+                {{/each}}
+
+            {{else}}
+
+                Ihr habt noch kein SprintBacklog? Fangt an zu planen !
+
+            {{/if}}
+        </section>
+    </div>
+
+    </template>
+
+
+    <template name="user">
+
+        <li class="list-group-item">{{username}}</li>
+
+    </template>

@@ -14,11 +14,16 @@
 
             <header>
                 <h2>
-                    Projekte
+                    Deine Projekte
 
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary btn-lg" id="openModal">
-                        Projekt hinzuf&uuml;gen </button>
+                    <button type="button" class="btn btn-primary openModal" id="newProject">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
+
+                    <button type="button" class="btn btn-primary openModal" id="joinProject">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
                 </h2>
 
             </header>
@@ -29,35 +34,33 @@
 
                     {{#if projectsCount}}
 
-                    {{#each projects}}
+                        {{#each projects}}
 
-                        {{>project}}
+                            {{>userProject}}
 
                         {{/each}}
 
                     {{else}}
                         <p>
-                            Du nimmst leider an noch keinen Projekten Teil. Bitte erstelle ein neues oder tritt einem bei.
+                            Du nimmst leider an noch keinen Projekten Teil. Bitte erstelle ein neues oder tritt einem
+                            bei.
                         </p>
                     {{/if}}
                 </div>
 
             </article>
 
-
         </section>
 
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="newProject" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="dashboardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
 
-
                     {{> Template.dynamic template=modalTemplate}}
-
 
                 </div>
             </div>
@@ -66,8 +69,7 @@
 
 </template>
 
-
-<template name="project">
+<template name="userProject">
 
     <button type="button" class="list-group-item startPlanning">{{projectname}}</button>
 

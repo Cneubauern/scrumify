@@ -1,3 +1,5 @@
+
+
 Template.newUser.events({
 
     "submit .newname": function(event) {
@@ -17,7 +19,6 @@ Template.newUser.events({
             console.log(Meteor.user().username);
 
         }
-
 
         $('#myModal').modal('hide');
     }

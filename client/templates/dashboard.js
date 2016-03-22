@@ -1,3 +1,5 @@
+Meteor.subscribe('projects');
+Meteor.subscribe('userprojects');
 
 Template.dashboard.onRendered(
 
@@ -14,33 +16,28 @@ Template.dashboard.onRendered(
         } else {
             console.log(username)
         }
-
     }
 );
-
-Meteor.subscribe("userProjects");
 
 Template.dashboard.helpers({
 
     projectsCount: function () {
 
         return UserProjects.find({userId: Meteor.userId()}).count()
-
     },
 
     projects: function () {
 
         return UserProjects.find({userId: Meteor.userId()});
-
     },
 
-    username: function(){
+    username: function () {
 
         return Meteor.user().username;
 
     },
 
-    modalTemplate: function(){
+    modalTemplate: function () {
 
         var template = FlowRouter.getParam('page');
 
@@ -53,41 +50,17 @@ Template.dashboard.helpers({
 
 Template.dashboard.events({
 
-    "click #openModal": function(){
+    "click .openModal": function (event) {
 
-        console.log("click");
+        console.log(event);
 
-        FlowRouter.go('createproject',{page: "newProject"});
+        FlowRouter.go('createproject', {page: event.currentTarget.id});
 
-        $('#newProject').modal('show')
+        $('#dashboardModal').modal('show');
 
-
-
-    }
-
-});
-
-Template.project.events({
-
-    "click .startPlanning": function(event){
-
-        console.log(this.projectId);
-
-        FlowRouter.go('startplanning',{id: this.projectId})
-    },
-
-    "click .deleteBtn": function(event){
 
     }
 
 });
 
-Template.project.helpers({
 
-    projectname: function(){
-
-        return Projects.findOne(this.projectId).name;
-
-    }
-
-});

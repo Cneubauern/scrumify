@@ -1,5 +1,14 @@
-Meteor.subscribe("backlogItems");
+Template.createBacklog.onCreated(
 
+    function(){
+
+        this.autorun(()=>{
+
+            //this.subscribe('userProjects.projects')
+
+        })
+    }
+);
 Template.createBacklog.events({
 
     "submit .newBacklogItem": function(event){

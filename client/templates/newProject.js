@@ -1,12 +1,39 @@
 Template.newProject.events({
 
-    "click #search":function(){
+    "submit .newProject": function (event) {
+        // Prevent default browser form submit
+        event.preventDefault();
 
-        FlowRouter.go('createproject',{page:'selectproject'})
-    },
+        console.log(event);
 
-    "click #create":function(){
+        // Get value from form element
+        var project = event.target.projectName.value;
 
-        FlowRouter.go('createproject',{page:'createproject'})
+
+        // Insert a task into the collection
+        Meteor.call("createProject", project, function (error, result) {
+
+            var projectId = result;
+
+            console.log(projectId);
+
+            Meteor.call('registerUser', projectId,function(error, result){
+
+                // Clear form
+
+            });
+
+        });
+
+        event.target.projectName.value = "";
+
+        $('#dashboardModal').modal('hide');
+
+        //FlowRouter.go('project', {id: projectId});
+
     }
+});
+
+Template.newProject.helpers({
+
 });

@@ -4,23 +4,47 @@
     // This code only runs on the server
     // Only publish tasks that are public or belong to the current user
 
-Meteor.publish('publicBacklogs', function() {
-    return ProductBacklogs.find();
+// Subscriptions to Criteria
+
+Meteor.publish('criteria', function(){
+    return Criteria.find();
 });
 
-Meteor.publish('privateBacklogs', function() {
-        return ProductBacklogs.find();
+// Subscriptions to Tasks
+
+Meteor.publish('tasks', function(){
+    return Tasks.find();
 });
 
-Meteor.publish('backlogItems', function(listId) {
-    return BacklogItems.find();
+
+// Subscriptions to SprintBacklogItems
+
+Meteor.publish('sprintBacklogItem', function(){
+    return SprintBacklogItems.find();
 });
+
+// Subscriptions to ProductBacklogItems
+
+Meteor.publish('produktBacklogItem', function(){
+    return ProductBacklogItems.find();
+});
+
+// Subscriptions to Projects
 
 Meteor.publish('projects', function(){
+
     return Projects.find();
 });
 
 
-Meteor.publish('userProjects', function(){
+// Subscriptions To UserProjects
+Meteor.publish('userprojects', function(){
+
     return UserProjects.find();
+
+});
+
+Meteor.publish('username', function(userId){
+
+    return Meteor.users.find({},{fields:{username:1}})
 });

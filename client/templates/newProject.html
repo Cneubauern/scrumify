@@ -1,60 +1,35 @@
 <template name="newProject">
+
     <div class="main">
 
         <section class="box">
             <header>
-
-                <h1>Willkommen zum Sprint Planning</h1>
-
-                <h3>
-                    Um loszulegen erstelle zuerst ein Projekt
-                </h3>
-
+                <h2>
+                    Erstelle dein Project
+                </h2>
             </header>
+
         </section>
 
         <section>
+            <article class="box">
 
-            <article class="chooseOne">
+                <div class="new-item-form">
 
-                <section class="box">
+                    <form class="newProject">
+                        <fieldset>
 
-                    <header>
-                       <h3>
-                           Hier kannst du ein neues Projekt erstellen
-                       </h3>
-                    </header>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">Name</span>
+                                <input type="text" name="projectName" class="form-control" placeholder="Projectname"
+                                       aria-describedby="basic-addon1">
+                            </div>
 
-                    <footer>
-                        <a class="btn btn-default choosebtn" id="create">Project erstellen</a>
-
-                    </footer>
-
-
-                </section>
-
-            </article>
-
-
-            <article class=" chooseOne">
-
-                <section class="box">
-
-                    <h3>
-                        Hier kannst du einem Projekt beitreten
-                    </h3>
-
-                    <footer>
-                        <a class="btn btn-default choosebtn" id="search">Project suchen</a>
-
-                    </footer>
-
-                </section>
-
+                        </fieldset>
+                    </form>
+                </div>
             </article>
         </section>
-
-
     </div>
 
 </template>
